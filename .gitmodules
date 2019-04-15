@@ -7,3 +7,6 @@
 [submodule "Assets/Plugins/Augmenta"]
 	path = Assets/Plugins/Augmenta
 	url = https://github.com/theoriz/augmentaunity
+[submodule "Assets/Plugins/KAPPS"]
+	path = Assets/Plugins/KAPPS
+	url = https://bitbucket.org/lyptik/kapps
