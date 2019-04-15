@@ -6,7 +6,7 @@
 	url = https://github.com/Theoriz/GenUI
 [submodule "Assets/Plugins/Augmenta"]
 	path = Assets/Plugins/Augmenta
-	url = https://github.com/theoriz/augmentaunity
+	url = https://github.com/Theoriz/AugmentaUnity
 [submodule "Assets/Plugins/KAPPS"]
 	path = Assets/Plugins/KAPPS
 	url = https://bitbucket.org/lyptik/kapps
