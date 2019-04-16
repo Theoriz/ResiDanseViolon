@@ -556,9 +556,9 @@ MonoBehaviour:
   _inputType: 0
   _skinnedMeshList: []
   _pointCloudsList:
-  - {fileID: 11400000, guid: 58860876a6c13734da61454628729f4d, type: 2}
+  - {fileID: 11400000, guid: 3fc21fdb1ac67024da3bb20f69d475e2, type: 2}
   _particleMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  _particleScale: {x: 0.08, y: 0.02, z: 0.02}
+  _particleScale: {x: 0.02, y: 0.04, z: 0.02}
   _particleMaterial: {fileID: 2100000, guid: 0acf37770e57b9c4a9ac34b5eff6eefa, type: 2}
   _bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -595,7 +595,7 @@ MonoBehaviour:
   _noiseFieldScaleScale: 0
   _noiseFieldScaleIntensity: 0
   _noiseFieldScaleSpeed: {x: 0.3, y: 0.3, z: 0.3}
-  _enableAttractionUpdater: 1
+  _enableAttractionUpdater: 0
   _enableDipolarUpdater: 0
   _enableVortexUpdater: 0
   _enableOrbUpdater: 0
@@ -622,7 +622,7 @@ MonoBehaviour:
   _originInterpolationNoiseScale: 1
   _originInterpolationNoiseIntensity: 0.1
   _originInterpolationNoiseSpeed: 0.3
-  _enableGridConstraintUpdater: 1
+  _enableGridConstraintUpdater: 0
   _gridConstraintUseSources: 0
   _gridResolution: {x: 7, y: 7, z: 7}
   _gridStrength: 0.105
@@ -1401,10 +1401,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ba005b6d48e15f45bac54ba31b0174f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updater: 9
-  particleSystemList:
-  - {fileID: 0}
-  - {fileID: 0}
+  updater: 7
+  particleSystemList: []
   active: 1
   infiniteInX: 0
   infiniteInY: 1
@@ -1642,10 +1640,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ba005b6d48e15f45bac54ba31b0174f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updater: 9
-  particleSystemList:
-  - {fileID: 0}
-  - {fileID: 0}
+  updater: 7
+  particleSystemList: []
   active: 1
   infiniteInX: 0
   infiniteInY: 1
@@ -1764,10 +1760,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ba005b6d48e15f45bac54ba31b0174f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updater: 8
-  particleSystemList:
-  - {fileID: 0}
-  - {fileID: 0}
+  updater: 7
+  particleSystemList: []
   active: 1
   infiniteInX: 0
   infiniteInY: 1
@@ -1847,7 +1841,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7970659939669153096}
   m_LocalRotation: {x: 0.9598543, y: 0, z: 0, w: 0.28049916}
-  m_LocalPosition: {x: 0, y: 1.048, z: -4.053}
+  m_LocalPosition: {x: 0, y: 1.73, z: -4.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7970659941194973918}
@@ -1881,8 +1875,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 0.5641353, b: 0, a: 1}
-  m_Intensity: 7.52
-  m_Range: 4.9
+  m_Intensity: 25
+  m_Range: 3.2
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:

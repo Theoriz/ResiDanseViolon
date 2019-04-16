@@ -24,12 +24,22 @@ public class SpiralsManager : MonoBehaviour
         foreach(var vortex in vortexes)
         {
             var sum = Mathf.Abs(analyzer.XDerivated) + Mathf.Abs(analyzer.YDerivated) + Mathf.Abs(analyzer.ZDerivated);
-            vortex.radius = Mathf.Lerp(vortex.radius, Remap(sum, MinMaxInitValue.x, MinMaxRadius.x, MinMaxInitValue.y, MinMaxRadius.y), Time.time * Lerpstrength);
+            vortex.radius = Mathf.Lerp(vortex.radius, Remap(sum, MinMaxInitValue.x, MinMaxInitValue.y, MinMaxRadius.x, MinMaxRadius.y), Time.time * Lerpstrength);
         }
     }
 
-    public float Remap(float value, float from1, float to1, float from2, float to2)
+    public float Remap(float from, float fromMin, float fromMax, float toMin, float toMax)
     {
-        return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
+        var fromAbs = from - fromMin;
+        var fromMaxAbs = fromMax - fromMin;
+
+        var normal = fromAbs / fromMaxAbs;
+
+        var toMaxAbs = toMax - toMin;
+        var toAbs = toMaxAbs * normal;
+
+        var to = toAbs + toMin;
+
+        return to;
     }
 }
