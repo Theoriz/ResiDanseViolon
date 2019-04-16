@@ -176,7 +176,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &732513534
 AudioListener:
   m_ObjectHideFlags: 0
@@ -351,7 +351,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 287613241594627376}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.88, z: 0}
+  m_LocalPosition: {x: 0, y: 7.88, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 287613242044584663}
@@ -390,7 +390,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -469,7 +469,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1197,7 +1197,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5003705110881123019}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.79, y: -2.79, z: 0.74}
+  m_LocalPosition: {x: 0.79, y: -2.79, z: -4.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7049978666280334038}
@@ -1554,7 +1554,7 @@ MonoBehaviour:
   _inputType: 0
   _skinnedMeshList: []
   _pointCloudsList:
-  - {fileID: 11400000, guid: 1d1fd52ce7a9dfd43a748423825be60f, type: 2}
+  - {fileID: 11400000, guid: 723dd1d325cfaf84198812977c7d1cfe, type: 2}
   _particleMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   _particleScale: {x: 0.04, y: 0.04, z: 0.04}
   _particleMaterial: {fileID: 2100000, guid: da780437378734a4f8f8045f761a1b7b, type: 2}
@@ -1801,7 +1801,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
