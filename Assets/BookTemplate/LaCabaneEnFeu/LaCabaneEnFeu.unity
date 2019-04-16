@@ -320,14 +320,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1159641845825328228}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.25, y: 0.58, z: -5.93}
-  m_LocalScale: {x: 2.0943, y: 2.0943, z: 2.0943}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.21, y: 0.58, z: -6.9}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 6743102012388788322}
   m_Father: {fileID: 4407134225068993345}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &1159641845825328228
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,6 +360,7 @@ MonoBehaviour:
   _inputType: 0
   _skinnedMeshList: []
   _pointCloudsList:
+  - {fileID: 11400000, guid: 6dba22b57f24d1f44a4cda9513e52275, type: 2}
   - {fileID: 11400000, guid: 3fc21fdb1ac67024da3bb20f69d475e2, type: 2}
   _particleMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   _particleScale: {x: 0.01, y: 0.01, z: 0.1}
@@ -393,8 +394,8 @@ MonoBehaviour:
   _gravityDirection: {x: 0, y: 0, z: -0.1}
   _enableNoiseFieldUpdater: 1
   _noiseFieldUseGlobal: 1
-  _noiseFieldPositionScale: 0.2
-  _noiseFieldPositionIntensity: 0.1
+  _noiseFieldPositionScale: 1.12
+  _noiseFieldPositionIntensity: 0.5
   _noiseFieldPositionSpeed: {x: 0, y: 0, z: -0.1}
   _noiseFieldScaleScale: 0.2
   _noiseFieldScaleIntensity: 0.01
@@ -406,20 +407,38 @@ MonoBehaviour:
   _enableRevolutionUpdater: 0
   _enableColliderUpdater: 1
   _collidersList: []
-  _enableParticleEmissionUpdater: 1
+  _enableParticleEmissionUpdater: 0
   _particleEmissionLifetime: 5
   _particleEmissionBirthDuration: 0.5
   _particleEmissionDeathDuration: 0.5
   _enableOriginAttractionUpdater: 0
-  _originAttractionStrength: 2
-  _enableOriginInterpolationUpdater: 0
+  _originAttractionStrength: 94.5
+  _enableOriginInterpolationUpdater: 1
   _originInterpolationEnabled: 0
   _originInterpolationLoop: 0
   _originInterpolationSwapInputBefore: 0
-  _originInterpolationDuration: 2
+  _originInterpolationDuration: 5
   _originInterpolationCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -446,8 +465,8 @@ MonoBehaviour:
   _enableParticleUpdater: 1
   _particleUpdateUseSources: 0
   _particleUpdateDeceleration: 0.98
-  _particleUpdateRotationSpeed: 0.1
-  _particleUpdateAlignWithVelocity: 1
+  _particleUpdateRotationSpeed: 0.01
+  _particleUpdateAlignWithVelocity: 0
   _particleUpdateAlignmentVelocityStrength: 1
   _particleUpdateAlignWithAxis: 0
   _particleUpdateAlignmentAxis: {x: 1, y: 0, z: 0}
@@ -809,7 +828,7 @@ MonoBehaviour:
   intensity: 24.38
   useTransformRotation: 0
   gravityDirection: {x: 0, y: -1, z: 0}
-  color: {r: 1, g: 0.5103556, b: 0.035294116, a: 1}
+  color: {r: 1, g: 0.2764706, b: 0.035294116, a: 1}
   lightEmissionProbability: 1
   lightEmissionOffset: 0
   lightEmissionFrequency: 0
@@ -832,7 +851,7 @@ MonoBehaviour:
   axisAlignmentStrength: 0
   showGizmos: 1
   activeUpdaterAndInfinite: {x: 1, y: 0, z: 1, w: 7}
-  data1: {x: 1, y: 0.5103556, z: 0.035294116, w: 1}
+  data1: {x: 1, y: 0.2764706, z: 0.035294116, w: 1}
   data2: {x: 1, y: 0, z: 0, w: 0}
   data3: {x: 0, y: 0, z: 0, w: 0}
 --- !u!4 &1841827444012393309
