@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17380475, g: 0.21730928, b: 0.29945424, a: 1}
+  m_IndirectSpecularColor: {r: 0.000017033932, g: 0.000000025772884, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -112,6 +112,44 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!108 &355296551220973434
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6385071263459825963}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 0.07735014, g: 0, b: 1, a: 1}
+  m_Intensity: 35.45
+  m_Range: 6.5
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!4 &570787787110186823
 Transform:
   m_ObjectHideFlags: 0
@@ -140,8 +178,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updater: 7
   particleSystemList:
-  - {fileID: 5086024789687399735}
-  - {fileID: 5086024788535787367}
+  - {fileID: 0}
+  - {fileID: 0}
   active: 1
   infiniteInX: 0
   infiniteInY: 1
@@ -176,20 +214,6 @@ MonoBehaviour:
   data1: {x: 0, y: -1, z: 0, w: 0}
   data2: {x: 1, y: 1, z: 0, w: 0}
   data3: {x: 0, y: 0, z: 0, w: 0}
---- !u!4 &1512478065115746262
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4125155963717193708}
-  m_LocalRotation: {x: -0.9621942, y: 0, z: 0, w: -0.27236444}
-  m_LocalPosition: {x: 0, y: 3.2, z: -2.69}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5086024789321367796}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 508.39, y: 0, z: 0}
 --- !u!1 &2188406588739808184
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,6 +226,158 @@ GameObject:
   - component: {fileID: 3096542218885590576}
   m_Layer: 0
   m_Name: Spiral (2)(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &2825476168806023588
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2825476168806023589}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 1
+  m_Color: {r: 0, g: 0.3898821, b: 1, a: 1}
+  m_Intensity: 0
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!1 &2825476168806023589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2825476168806023595}
+  - component: {fileID: 2825476168806023588}
+  - component: {fileID: 2825476168806023591}
+  - component: {fileID: 2825476168806023590}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2825476168806023590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2825476168806023589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eb406d4909d1d44fa489d30cba6c3fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _filterType: 1
+  _peakTracking: 1
+  _gain: 6
+  _dynamicRange: 12
+  _holdAndFallDown: 1
+  _fallDownSpeed: 0.3
+  _normalizedLevelEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2825476168806023588}
+        m_MethodName: set_intensity
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Lasp.AudioLevelEvent, Lasp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &2825476168806023591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2825476168806023589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61cde347582cc354aa2cf3713395abb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intensity: 0
+  scale: 30
+  filterType: 0
+  light: {fileID: 2825476168806023588}
+--- !u!4 &2825476168806023595
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2825476168806023589}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 2.61, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2825476170604451379}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!4 &2825476170604451379
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2825476170604451404}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2825476168806023595}
+  - {fileID: 8457282685892172049}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2825476170604451404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2825476170604451379}
+  m_Layer: 0
+  m_Name: Lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -221,8 +397,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updater: 7
   particleSystemList:
-  - {fileID: 5086024789687399735}
-  - {fileID: 5086024788535787367}
+  - {fileID: 0}
+  - {fileID: 0}
   active: 1
   infiniteInX: 0
   infiniteInY: 1
@@ -271,8 +447,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updater: 7
   particleSystemList:
-  - {fileID: 5086024789687399735}
-  - {fileID: 5086024788535787367}
+  - {fileID: 0}
+  - {fileID: 0}
   active: 1
   infiniteInX: 0
   infiniteInY: 1
@@ -321,23 +497,6 @@ Transform:
   m_Father: {fileID: 5087575895321469215}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4125155963717193708
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1512478065115746262}
-  - component: {fileID: 7299612988562201021}
-  m_Layer: 0
-  m_Name: Directional Light (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &4370545186025131596
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,225 +828,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5086024788436734436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5086024788436734459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ba005b6d48e15f45bac54ba31b0174f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  updater: 6
-  particleSystemList:
-  - {fileID: 5086024789687399735}
-  active: 1
-  infiniteInX: 1
-  infiniteInY: 0
-  infiniteInZ: 1
-  radius: 1.09
-  intensity: 8.7
-  useTransformRotation: 0
-  gravityDirection: {x: 0, y: -1, z: 0}
-  color: {r: 0.035294116, g: 0.3755921, b: 1, a: 1}
-  lightEmissionProbability: 1
-  lightEmissionOffset: 0
-  lightEmissionFrequency: 0
-  lightEmissionPhase: 0
-  dipoleAxis: {x: 0, y: 1, z: 0}
-  isMagnetic: 0
-  vortexAxis: {x: 0, y: -1, z: 0}
-  vortexRadialIntensity: 1
-  vortexDownstreamIntensity: 1
-  orbRadius: 1
-  orbSigma: 1
-  revolutionAxis: {x: 0, y: 1, z: 0}
-  revolutionPowerOfR: 1
-  noiseDeformerDisplacementIntensity: 0
-  noiseDeformerRotationIntensity: 0
-  noiseDeformerScaleIntensity: 0
-  noiseDeformerPulseIntensity: 0
-  axisConstraint: {x: 0, y: 0, z: 0}
-  velocityAlignmentStrength: 0
-  axisAlignmentStrength: 0
-  showGizmos: 1
-  activeUpdaterAndInfinite: {x: 1, y: 0, z: 1, w: 7}
-  data1: {x: 0.035294116, y: 0.3755921, z: 1, w: 1}
-  data2: {x: 1, y: 0, z: 0, w: 0}
-  data3: {x: 0, y: 0, z: 0, w: 0}
---- !u!4 &5086024788436734437
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5086024788436734459}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.07, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7076005959872731641}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5086024788436734459
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5086024788436734437}
-  - component: {fileID: 5086024788436734436}
-  m_Layer: 0
-  m_Name: LightSource
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5086024788535787360
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5086024788535787366}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.25, y: 0, z: -2.89}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7076005959872731641}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5086024788535787366
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5086024788535787360}
-  - component: {fileID: 5086024788535787367}
-  m_Layer: 0
-  m_Name: KAPPS-Sphere
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &5086024788535787367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5086024788535787366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3491fd385b35f149ab669b32775b69d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _inputType: 0
-  _skinnedMeshList: []
-  _pointCloudsList:
-  - {fileID: 11400000, guid: 1422dfd2c2efe5b46b2f019a0aadfd4d, type: 2}
-  _particleMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  _particleScale: {x: 0.08, y: 0.02, z: 0.02}
-  _particleMaterial: {fileID: 2100000, guid: 0acf37770e57b9c4a9ac34b5eff6eefa, type: 2}
-  _bounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 5, y: 5, z: 5}
-  _randomSeed: 0
-  _sourcesList: []
-  _currentInputIndex: 0
-  _enableInitUpdater: 0
-  _initMinMass: 2
-  _initMaxMass: 3
-  _initMinLocalScale: 1
-  _initMaxLocalScale: 1
-  _initMinBounciness: 1
-  _initMaxBounciness: 1
-  _initCollisionDistance: 0
-  _enableNoiseDeformerUpdater: 0
-  _noiseDeformerUseSources: 0
-  _noiseDeformerDisplacementByNoise: 0.125
-  _noiseDeformerRotationByNoise: 0.125
-  _noiseDeformerScaleByNoise: 0.1
-  _noiseDeformerScaleByPulse: 0.1
-  _noiseDeformerNoiseFrequency: 1
-  _noiseDeformerNoiseSpeed: {x: 0, y: 0.25, z: 0}
-  _noiseDeformerPulseProbability: 0
-  _noiseDeformerPulseSpeed: 2
-  _enableGravityUpdater: 0
-  _gravityUseGlobal: 1
-  _gravityDirection: {x: 0, y: 0, z: 1.5}
-  _enableNoiseFieldUpdater: 1
-  _noiseFieldUseGlobal: 1
-  _noiseFieldPositionScale: 0.35
-  _noiseFieldPositionIntensity: 0.4
-  _noiseFieldPositionSpeed: {x: 0, y: 0, z: -0.1}
-  _noiseFieldScaleScale: 0
-  _noiseFieldScaleIntensity: 0
-  _noiseFieldScaleSpeed: {x: 0.3, y: 0.3, z: 0.3}
-  _enableAttractionUpdater: 1
-  _enableDipolarUpdater: 0
-  _enableVortexUpdater: 0
-  _enableOrbUpdater: 0
-  _enableRevolutionUpdater: 0
-  _enableColliderUpdater: 1
-  _collidersList: []
-  _enableParticleEmissionUpdater: 1
-  _particleEmissionLifetime: 5
-  _particleEmissionBirthDuration: 0.5
-  _particleEmissionDeathDuration: 0.5
-  _enableOriginAttractionUpdater: 0
-  _originAttractionStrength: 2
-  _enableOriginInterpolationUpdater: 0
-  _originInterpolationEnabled: 0
-  _originInterpolationLoop: 0
-  _originInterpolationSwapInputBefore: 0
-  _originInterpolationDuration: 2
-  _originInterpolationCurve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  _originInterpolationNoiseScale: 1
-  _originInterpolationNoiseIntensity: 0.1
-  _originInterpolationNoiseSpeed: 0.3
-  _enableGridConstraintUpdater: 0
-  _gridConstraintUseSources: 0
-  _gridResolution: {x: 5, y: 5, z: 5}
-  _gridStrength: 1
-  _enableAxisConstraintUpdater: 0
-  _axisConstraintUseSources: 0
-  _axisConstraintFreezeX: 0.519
-  _axisConstraintFreezeY: 0
-  _axisConstraintFreezeZ: 0
-  _enableLightEmissionUpdater: 1
-  _lightEmissionUseGlobal: 0
-  _lightEmissionColor: {r: 0.033018887, g: 0.7770009, b: 1, a: 1}
-  _lightEmissionProbability: 0.407
-  _lightEmissionOffset: 0
-  _lightEmissionIntensity: 10
-  _lightEmissionFrequency: 0
-  _lightEmissionPhase: 0
-  _enableParticleUpdater: 1
-  _particleUpdateUseSources: 0
-  _particleUpdateDeceleration: 0.98
-  _particleUpdateRotationSpeed: 0.1
-  _particleUpdateAlignWithVelocity: 1
-  _particleUpdateAlignmentVelocityStrength: 1
-  _particleUpdateAlignWithAxis: 0
-  _particleUpdateAlignmentAxis: {x: 0, y: 1, z: 0}
-  _particleUpdateAlignmentAxisStrength: 0
-  _compute: {fileID: 7200000, guid: 35ba6035930f60f4eb3b15dc159995e4, type: 3}
 --- !u!33 &5086024788773195128
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -980,369 +920,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &5086024788869289826
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5086024788869289836}
-  - component: {fileID: 5086024788869289827}
-  m_Layer: 0
-  m_Name: Directional Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &5086024788869289827
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5086024788869289826}
-  m_Enabled: 1
-  serializedVersion: 8
-  m_Type: 1
-  m_Color: {r: 0, g: 0.3898821, b: 1, a: 1}
-  m_Intensity: 1.5
-  m_Range: 10
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!4 &5086024788869289836
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5086024788869289826}
-  m_LocalRotation: {x: 0.62230974, y: 0, z: 0, w: 0.7827711}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5086024789321367796}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 76.97, y: 0, z: 0}
---- !u!1 &5086024789321367691
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5086024789321367796}
-  m_Layer: 0
-  m_Name: Lights
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5086024789321367796
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5086024789321367691}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 5086024788869289836}
-  - {fileID: 1512478065115746262}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &5086024789687399728
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5086024789687399734}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.83, y: 0, z: -4.45}
-  m_LocalScale: {x: 1, y: 1, z: 1.0967}
-  m_Children: []
-  m_Father: {fileID: 7076005959872731641}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5086024789687399734
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5086024789687399728}
-  - component: {fileID: 5086024789687399735}
-  m_Layer: 0
-  m_Name: KAPPS-Floor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &5086024789687399735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5086024789687399734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3491fd385b35f149ab669b32775b69d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _inputType: 0
-  _skinnedMeshList: []
-  _pointCloudsList:
-  - {fileID: 11400000, guid: 655d49bcea616e04591ddcd5f58c92f9, type: 2}
-  _particleMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  _particleScale: {x: 0.3, y: 0.0125, z: 0.0125}
-  _particleMaterial: {fileID: 2100000, guid: 084952f74dd8b8847b34e4b86bc6d6ad, type: 2}
-  _bounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 5, y: 5, z: 5}
-  _randomSeed: 0
-  _sourcesList: []
-  _currentInputIndex: 0
-  _enableInitUpdater: 0
-  _initMinMass: 0.5
-  _initMaxMass: 1.5
-  _initMinLocalScale: 1
-  _initMaxLocalScale: 1
-  _initMinBounciness: 1
-  _initMaxBounciness: 1
-  _initCollisionDistance: 0
-  _enableNoiseDeformerUpdater: 0
-  _noiseDeformerUseSources: 0
-  _noiseDeformerDisplacementByNoise: 0.125
-  _noiseDeformerRotationByNoise: 0.125
-  _noiseDeformerScaleByNoise: 0.1
-  _noiseDeformerScaleByPulse: 0.1
-  _noiseDeformerNoiseFrequency: 1
-  _noiseDeformerNoiseSpeed: {x: 0, y: 0.25, z: 0}
-  _noiseDeformerPulseProbability: 0
-  _noiseDeformerPulseSpeed: 2
-  _enableGravityUpdater: 1
-  _gravityUseGlobal: 1
-  _gravityDirection: {x: 0, y: 0, z: 0.5}
-  _enableNoiseFieldUpdater: 1
-  _noiseFieldUseGlobal: 1
-  _noiseFieldPositionScale: 0.45
-  _noiseFieldPositionIntensity: -0.2
-  _noiseFieldPositionSpeed: {x: 0, y: 0, z: -0.025}
-  _noiseFieldScaleScale: 0
-  _noiseFieldScaleIntensity: 0
-  _noiseFieldScaleSpeed: {x: 0.3, y: 0.3, z: 0.3}
-  _enableAttractionUpdater: 1
-  _enableDipolarUpdater: 1
-  _enableVortexUpdater: 1
-  _enableOrbUpdater: 1
-  _enableRevolutionUpdater: 1
-  _enableColliderUpdater: 1
-  _collidersList: []
-  _enableParticleEmissionUpdater: 1
-  _particleEmissionLifetime: 5
-  _particleEmissionBirthDuration: 0.5
-  _particleEmissionDeathDuration: 0.5
-  _enableOriginAttractionUpdater: 0
-  _originAttractionStrength: 2
-  _enableOriginInterpolationUpdater: 0
-  _originInterpolationEnabled: 0
-  _originInterpolationLoop: 0
-  _originInterpolationSwapInputBefore: 0
-  _originInterpolationDuration: 2
-  _originInterpolationCurve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  _originInterpolationNoiseScale: 1
-  _originInterpolationNoiseIntensity: 0.1
-  _originInterpolationNoiseSpeed: 0.3
-  _enableGridConstraintUpdater: 0
-  _gridConstraintUseSources: 0
-  _gridResolution: {x: 5, y: 5, z: 5}
-  _gridStrength: 1
-  _enableAxisConstraintUpdater: 0
-  _axisConstraintUseSources: 0
-  _axisConstraintFreezeX: 0.519
-  _axisConstraintFreezeY: 0
-  _axisConstraintFreezeZ: 0
-  _enableLightEmissionUpdater: 1
-  _lightEmissionUseGlobal: 0
-  _lightEmissionColor: {r: 1, g: 1, b: 1, a: 1}
-  _lightEmissionProbability: 0.01
-  _lightEmissionOffset: 0
-  _lightEmissionIntensity: 10
-  _lightEmissionFrequency: 0
-  _lightEmissionPhase: 0
-  _enableParticleUpdater: 1
-  _particleUpdateUseSources: 0
-  _particleUpdateDeceleration: 0.98
-  _particleUpdateRotationSpeed: 0.1
-  _particleUpdateAlignWithVelocity: 1
-  _particleUpdateAlignmentVelocityStrength: 0.849
-  _particleUpdateAlignWithAxis: 1
-  _particleUpdateAlignmentAxis: {x: 0, y: 1, z: 0}
-  _particleUpdateAlignmentAxisStrength: 0
-  _compute: {fileID: 7200000, guid: 35ba6035930f60f4eb3b15dc159995e4, type: 3}
---- !u!1 &5086024789785872440
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5086024789785872441}
-  - component: {fileID: 5086024789785872442}
-  - component: {fileID: 5086024789785872443}
-  m_Layer: 0
-  m_Name: SourcesSphere
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5086024789785872441
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5086024789785872440}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.25, y: 0, z: -3.23}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7076005959872731641}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5086024789785872442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5086024789785872440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ba005b6d48e15f45bac54ba31b0174f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  updater: 2
-  particleSystemList:
-  - {fileID: 5086024788535787367}
-  active: 1
-  infiniteInX: 0
-  infiniteInY: 0
-  infiniteInZ: 0
-  radius: 3.1
-  intensity: 1
-  useTransformRotation: 0
-  gravityDirection: {x: 0, y: -1, z: 0}
-  color: {r: 1, g: 1, b: 1, a: 1}
-  lightEmissionProbability: 1
-  lightEmissionOffset: 0
-  lightEmissionFrequency: 0
-  lightEmissionPhase: 0
-  dipoleAxis: {x: 0, y: 1, z: 0}
-  isMagnetic: 0
-  vortexAxis: {x: 0, y: -1, z: 0}
-  vortexRadialIntensity: 1
-  vortexDownstreamIntensity: 1
-  orbRadius: 1
-  orbSigma: 1
-  revolutionAxis: {x: 0, y: 1, z: 0}
-  revolutionPowerOfR: 1
-  noiseDeformerDisplacementIntensity: 0
-  noiseDeformerRotationIntensity: 0
-  noiseDeformerScaleIntensity: 0
-  noiseDeformerPulseIntensity: 0
-  axisConstraint: {x: 0, y: 0, z: 0}
-  velocityAlignmentStrength: 0
-  axisAlignmentStrength: 0
-  showGizmos: 1
-  activeUpdaterAndInfinite: {x: 0, y: 0, z: 0, w: 3}
-  data1: {x: 0, y: 0, z: 0, w: 0}
-  data2: {x: 0, y: 0, z: 0, w: 0}
-  data3: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &5086024789785872443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5086024789785872440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c6fdc04563f0c34ebe9cf616452458b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particleSystemList:
-  - {fileID: 5086024789687399735}
-  - {fileID: 5086024788535787367}
-  active: 1
-  infiniteInX: 0
-  infiniteInY: 0
-  infiniteInZ: 0
-  bounciness: 1
-  type: 0
-  boxSize: {x: 1, y: 1, z: 1}
-  sphereRadius: 1.01
-  activeTypeAndInfinite: {x: 0, y: 0, z: 0, w: 2}
-  size: {x: 0, y: 0, z: 0, w: 1.01}
-  colliderToWorldMatrix:
-    e00: 0
-    e01: 0
-    e02: 0
-    e03: 0
-    e10: 0
-    e11: 0
-    e12: 0
-    e13: 0
-    e20: 0
-    e21: 0
-    e22: 0
-    e23: 0
-    e30: 0
-    e31: 0
-    e32: 0
-    e33: 0
 --- !u!4 &5087575895321469215
 Transform:
   m_ObjectHideFlags: 0
@@ -1359,7 +936,7 @@ Transform:
   - {fileID: 3647612660520718350}
   - {fileID: 9118363078938790438}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!20 &5106893821264603525
 Camera:
@@ -1494,7 +1071,7 @@ Behaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5084720433649639907}
   m_Enabled: 1
---- !u!1 &7076005959872731640
+--- !u!1 &5781250230837229598
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1502,7 +1079,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7076005959872731641}
+  - component: {fileID: 5781250230837229599}
   m_Layer: 0
   m_Name: Kapps
   m_TagString: Untagged
@@ -1510,62 +1087,41 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7076005959872731641
+--- !u!4 &5781250230837229599
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7076005959872731640}
+  m_GameObject: {fileID: 5781250230837229598}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5086024788436734437}
-  - {fileID: 5086024789687399728}
-  - {fileID: 5086024789785872441}
-  - {fileID: 5086024788535787360}
+  - {fileID: 8402895583947927555}
+  - {fileID: 8402895582646342870}
+  - {fileID: 8402895582614841823}
+  - {fileID: 8402895583914876550}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!108 &7299612988562201021
-Light:
+--- !u!1 &6385071263459825963
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4125155963717193708}
-  m_Enabled: 1
-  serializedVersion: 8
-  m_Type: 2
-  m_Color: {r: 0.07735014, g: 0, b: 1, a: 1}
-  m_Intensity: 64.1
-  m_Range: 3.81
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8457282685892172049}
+  - component: {fileID: 355296551220973434}
+  m_Layer: 0
+  m_Name: Directional Light (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &7427733734634665655
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,8 +1153,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updater: 9
   particleSystemList:
-  - {fileID: 5086024789687399735}
-  - {fileID: 5086024788535787367}
+  - {fileID: 0}
+  - {fileID: 0}
   active: 1
   infiniteInX: 0
   infiniteInY: 1
@@ -1838,8 +1394,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updater: 9
   particleSystemList:
-  - {fileID: 5086024789687399735}
-  - {fileID: 5086024788535787367}
+  - {fileID: 0}
+  - {fileID: 0}
   active: 1
   infiniteInX: 0
   infiniteInY: 1
@@ -1960,8 +1516,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updater: 8
   particleSystemList:
-  - {fileID: 5086024789687399735}
-  - {fileID: 5086024788535787367}
+  - {fileID: 0}
+  - {fileID: 0}
   active: 1
   infiniteInX: 0
   infiniteInY: 1
@@ -2033,6 +1589,501 @@ MonoBehaviour:
   _rotationScale: {x: 1, y: 1, z: 0}
   _positionFractalLevel: 3
   _rotationFractalLevel: 3
+--- !u!114 &8402895582614841820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8402895582614841822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ba005b6d48e15f45bac54ba31b0174f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updater: 2
+  particleSystemList:
+  - {fileID: 8402895583914876545}
+  active: 1
+  infiniteInX: 0
+  infiniteInY: 0
+  infiniteInZ: 0
+  radius: 3.1
+  intensity: 1
+  useTransformRotation: 0
+  gravityDirection: {x: 0, y: -1, z: 0}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  lightEmissionProbability: 1
+  lightEmissionOffset: 0
+  lightEmissionFrequency: 0
+  lightEmissionPhase: 0
+  dipoleAxis: {x: 0, y: 1, z: 0}
+  isMagnetic: 0
+  vortexAxis: {x: 0, y: -1, z: 0}
+  vortexRadialIntensity: 1
+  vortexDownstreamIntensity: 1
+  orbRadius: 1
+  orbSigma: 1
+  revolutionAxis: {x: 0, y: 1, z: 0}
+  revolutionPowerOfR: 1
+  noiseDeformerDisplacementIntensity: 0
+  noiseDeformerRotationIntensity: 0
+  noiseDeformerScaleIntensity: 0
+  noiseDeformerPulseIntensity: 0
+  axisConstraint: {x: 0, y: 0, z: 0}
+  velocityAlignmentStrength: 0
+  axisAlignmentStrength: 0
+  showGizmos: 1
+  activeUpdaterAndInfinite: {x: 0, y: 0, z: 0, w: 3}
+  data1: {x: 0, y: 0, z: 0, w: 0}
+  data2: {x: 0, y: 0, z: 0, w: 0}
+  data3: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8402895582614841821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8402895582614841822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c6fdc04563f0c34ebe9cf616452458b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleSystemList:
+  - {fileID: 8402895582646342865}
+  - {fileID: 8402895583914876545}
+  active: 1
+  infiniteInX: 0
+  infiniteInY: 0
+  infiniteInZ: 0
+  bounciness: 1
+  type: 0
+  boxSize: {x: 1, y: 1, z: 1}
+  sphereRadius: 1.01
+  activeTypeAndInfinite: {x: 0, y: 0, z: 0, w: 2}
+  size: {x: 0, y: 0, z: 0, w: 1.01}
+  colliderToWorldMatrix:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+--- !u!1 &8402895582614841822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8402895582614841823}
+  - component: {fileID: 8402895582614841820}
+  - component: {fileID: 8402895582614841821}
+  m_Layer: 0
+  m_Name: SourcesSphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8402895582614841823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8402895582614841822}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.25, y: 0, z: -4.49}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5781250230837229599}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8402895582646342864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8402895582646342870}
+  - component: {fileID: 8402895582646342865}
+  m_Layer: 0
+  m_Name: KAPPS-Floor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &8402895582646342865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8402895582646342864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3491fd385b35f149ab669b32775b69d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputType: 0
+  _skinnedMeshList: []
+  _pointCloudsList:
+  - {fileID: 11400000, guid: 655d49bcea616e04591ddcd5f58c92f9, type: 2}
+  _particleMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  _particleScale: {x: 0.25, y: 0.0125, z: 0.0125}
+  _particleMaterial: {fileID: 2100000, guid: 084952f74dd8b8847b34e4b86bc6d6ad, type: 2}
+  _bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 5, y: 5, z: 5}
+  _randomSeed: 0
+  _sourcesList: []
+  _currentInputIndex: 0
+  _enableInitUpdater: 0
+  _initMinMass: 0.5
+  _initMaxMass: 1.5
+  _initMinLocalScale: 1
+  _initMaxLocalScale: 1
+  _initMinBounciness: 1
+  _initMaxBounciness: 1
+  _initCollisionDistance: 0
+  _enableNoiseDeformerUpdater: 0
+  _noiseDeformerUseSources: 0
+  _noiseDeformerDisplacementByNoise: 0.125
+  _noiseDeformerRotationByNoise: 0.125
+  _noiseDeformerScaleByNoise: 0.1
+  _noiseDeformerScaleByPulse: 0.1
+  _noiseDeformerNoiseFrequency: 1
+  _noiseDeformerNoiseSpeed: {x: 0, y: 0.25, z: 0}
+  _noiseDeformerPulseProbability: 0
+  _noiseDeformerPulseSpeed: 2
+  _enableGravityUpdater: 1
+  _gravityUseGlobal: 1
+  _gravityDirection: {x: 0, y: 0, z: 0.5}
+  _enableNoiseFieldUpdater: 1
+  _noiseFieldUseGlobal: 1
+  _noiseFieldPositionScale: 0.3
+  _noiseFieldPositionIntensity: 0.2
+  _noiseFieldPositionSpeed: {x: 0, y: 0.025, z: 0.025}
+  _noiseFieldScaleScale: 0
+  _noiseFieldScaleIntensity: 0
+  _noiseFieldScaleSpeed: {x: 0.3, y: 0.3, z: 0.3}
+  _enableAttractionUpdater: 1
+  _enableDipolarUpdater: 1
+  _enableVortexUpdater: 1
+  _enableOrbUpdater: 1
+  _enableRevolutionUpdater: 1
+  _enableColliderUpdater: 1
+  _collidersList: []
+  _enableParticleEmissionUpdater: 1
+  _particleEmissionLifetime: 6
+  _particleEmissionBirthDuration: 0.5
+  _particleEmissionDeathDuration: 0.5
+  _enableOriginAttractionUpdater: 1
+  _originAttractionStrength: 1
+  _enableOriginInterpolationUpdater: 0
+  _originInterpolationEnabled: 0
+  _originInterpolationLoop: 0
+  _originInterpolationSwapInputBefore: 0
+  _originInterpolationDuration: 2
+  _originInterpolationCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _originInterpolationNoiseScale: 1
+  _originInterpolationNoiseIntensity: 0.1
+  _originInterpolationNoiseSpeed: 0.3
+  _enableGridConstraintUpdater: 0
+  _gridConstraintUseSources: 0
+  _gridResolution: {x: 5, y: 5, z: 5}
+  _gridStrength: 1
+  _enableAxisConstraintUpdater: 0
+  _axisConstraintUseSources: 0
+  _axisConstraintFreezeX: 0.519
+  _axisConstraintFreezeY: 0
+  _axisConstraintFreezeZ: 0
+  _enableLightEmissionUpdater: 1
+  _lightEmissionUseGlobal: 0
+  _lightEmissionColor: {r: 1, g: 1, b: 1, a: 1}
+  _lightEmissionProbability: 0.01
+  _lightEmissionOffset: 0
+  _lightEmissionIntensity: 10
+  _lightEmissionFrequency: 0
+  _lightEmissionPhase: 0
+  _enableParticleUpdater: 1
+  _particleUpdateUseSources: 0
+  _particleUpdateDeceleration: 0.98
+  _particleUpdateRotationSpeed: 0.1
+  _particleUpdateAlignWithVelocity: 1
+  _particleUpdateAlignmentVelocityStrength: 0.849
+  _particleUpdateAlignWithAxis: 1
+  _particleUpdateAlignmentAxis: {x: 0, y: 1, z: 0}
+  _particleUpdateAlignmentAxisStrength: 0
+  _compute: {fileID: 7200000, guid: 35ba6035930f60f4eb3b15dc159995e4, type: 3}
+--- !u!4 &8402895582646342870
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8402895582646342864}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.83, y: 0, z: -3.33}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5781250230837229599}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8402895583914876544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8402895583914876550}
+  - component: {fileID: 8402895583914876545}
+  m_Layer: 0
+  m_Name: KAPPS-Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &8402895583914876545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8402895583914876544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3491fd385b35f149ab669b32775b69d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputType: 0
+  _skinnedMeshList: []
+  _pointCloudsList:
+  - {fileID: 11400000, guid: 1422dfd2c2efe5b46b2f019a0aadfd4d, type: 2}
+  _particleMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  _particleScale: {x: 0.08, y: 0.02, z: 0.02}
+  _particleMaterial: {fileID: 2100000, guid: 0acf37770e57b9c4a9ac34b5eff6eefa, type: 2}
+  _bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 5, y: 5, z: 5}
+  _randomSeed: 0
+  _sourcesList: []
+  _currentInputIndex: 0
+  _enableInitUpdater: 0
+  _initMinMass: 2
+  _initMaxMass: 3
+  _initMinLocalScale: 1
+  _initMaxLocalScale: 1
+  _initMinBounciness: 1
+  _initMaxBounciness: 1
+  _initCollisionDistance: 0
+  _enableNoiseDeformerUpdater: 0
+  _noiseDeformerUseSources: 0
+  _noiseDeformerDisplacementByNoise: 0.125
+  _noiseDeformerRotationByNoise: 0.125
+  _noiseDeformerScaleByNoise: 0.1
+  _noiseDeformerScaleByPulse: 0.1
+  _noiseDeformerNoiseFrequency: 1
+  _noiseDeformerNoiseSpeed: {x: 0, y: 0.25, z: 0}
+  _noiseDeformerPulseProbability: 0
+  _noiseDeformerPulseSpeed: 2
+  _enableGravityUpdater: 0
+  _gravityUseGlobal: 1
+  _gravityDirection: {x: 0, y: 0, z: 1.5}
+  _enableNoiseFieldUpdater: 1
+  _noiseFieldUseGlobal: 1
+  _noiseFieldPositionScale: 0.35
+  _noiseFieldPositionIntensity: 0.4
+  _noiseFieldPositionSpeed: {x: 0, y: 0, z: -0.1}
+  _noiseFieldScaleScale: 0
+  _noiseFieldScaleIntensity: 0
+  _noiseFieldScaleSpeed: {x: 0.3, y: 0.3, z: 0.3}
+  _enableAttractionUpdater: 1
+  _enableDipolarUpdater: 0
+  _enableVortexUpdater: 0
+  _enableOrbUpdater: 0
+  _enableRevolutionUpdater: 0
+  _enableColliderUpdater: 1
+  _collidersList: []
+  _enableParticleEmissionUpdater: 1
+  _particleEmissionLifetime: 5
+  _particleEmissionBirthDuration: 0.5
+  _particleEmissionDeathDuration: 0.5
+  _enableOriginAttractionUpdater: 0
+  _originAttractionStrength: 2
+  _enableOriginInterpolationUpdater: 0
+  _originInterpolationEnabled: 0
+  _originInterpolationLoop: 0
+  _originInterpolationSwapInputBefore: 0
+  _originInterpolationDuration: 2
+  _originInterpolationCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _originInterpolationNoiseScale: 1
+  _originInterpolationNoiseIntensity: 0.1
+  _originInterpolationNoiseSpeed: 0.3
+  _enableGridConstraintUpdater: 0
+  _gridConstraintUseSources: 0
+  _gridResolution: {x: 5, y: 5, z: 5}
+  _gridStrength: 1
+  _enableAxisConstraintUpdater: 0
+  _axisConstraintUseSources: 0
+  _axisConstraintFreezeX: 0.519
+  _axisConstraintFreezeY: 0
+  _axisConstraintFreezeZ: 0
+  _enableLightEmissionUpdater: 1
+  _lightEmissionUseGlobal: 0
+  _lightEmissionColor: {r: 0.033018887, g: 0.7770009, b: 1, a: 1}
+  _lightEmissionProbability: 0.407
+  _lightEmissionOffset: 0
+  _lightEmissionIntensity: 10
+  _lightEmissionFrequency: 0
+  _lightEmissionPhase: 0
+  _enableParticleUpdater: 1
+  _particleUpdateUseSources: 0
+  _particleUpdateDeceleration: 0.98
+  _particleUpdateRotationSpeed: 0.1
+  _particleUpdateAlignWithVelocity: 1
+  _particleUpdateAlignmentVelocityStrength: 1
+  _particleUpdateAlignWithAxis: 0
+  _particleUpdateAlignmentAxis: {x: 0, y: 1, z: 0}
+  _particleUpdateAlignmentAxisStrength: 0
+  _compute: {fileID: 7200000, guid: 35ba6035930f60f4eb3b15dc159995e4, type: 3}
+--- !u!4 &8402895583914876550
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8402895583914876544}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.25, y: 0, z: -3.88}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5781250230837229599}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8402895583947927554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8402895583947927581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ba005b6d48e15f45bac54ba31b0174f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updater: 6
+  particleSystemList:
+  - {fileID: 8402895582646342865}
+  active: 1
+  infiniteInX: 1
+  infiniteInY: 0
+  infiniteInZ: 1
+  radius: 1.09
+  intensity: 8.7
+  useTransformRotation: 0
+  gravityDirection: {x: 0, y: -1, z: 0}
+  color: {r: 0.035294116, g: 0.3755921, b: 1, a: 1}
+  lightEmissionProbability: 1
+  lightEmissionOffset: 0
+  lightEmissionFrequency: 0
+  lightEmissionPhase: 0
+  dipoleAxis: {x: 0, y: 1, z: 0}
+  isMagnetic: 0
+  vortexAxis: {x: 0, y: -1, z: 0}
+  vortexRadialIntensity: 1
+  vortexDownstreamIntensity: 1
+  orbRadius: 1
+  orbSigma: 1
+  revolutionAxis: {x: 0, y: 1, z: 0}
+  revolutionPowerOfR: 1
+  noiseDeformerDisplacementIntensity: 0
+  noiseDeformerRotationIntensity: 0
+  noiseDeformerScaleIntensity: 0
+  noiseDeformerPulseIntensity: 0
+  axisConstraint: {x: 0, y: 0, z: 0}
+  velocityAlignmentStrength: 0
+  axisAlignmentStrength: 0
+  showGizmos: 1
+  activeUpdaterAndInfinite: {x: 1, y: 0, z: 1, w: 7}
+  data1: {x: 0.035294116, y: 0.3755921, z: 1, w: 1}
+  data2: {x: 1, y: 0, z: 0, w: 0}
+  data3: {x: 0, y: 0, z: 0, w: 0}
+--- !u!4 &8402895583947927555
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8402895583947927581}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.05, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5781250230837229599}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8402895583947927581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8402895583947927555}
+  - component: {fileID: 8402895583947927554}
+  m_Layer: 0
+  m_Name: LightSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8457282685892172049
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6385071263459825963}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.26, z: -3.41}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2825476170604451379}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &9118363078938790438
 Transform:
   m_ObjectHideFlags: 0
