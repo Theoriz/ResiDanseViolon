@@ -12,7 +12,8 @@ public class Tableau4Behaviour : AugmentaBasicPersonBehaviour {
 		noiseDeformerSource = GetComponent<KAPPS.KAPPSSource>();
 
 		noiseDeformerRadius = noiseDeformerSource.radius;
-	}
+        noiseDeformerSource.radius = 0;
+    }
 
 	private void Update() {
 		noiseDeformerSource.radius = noiseDeformerRadius * AnimatedValue;

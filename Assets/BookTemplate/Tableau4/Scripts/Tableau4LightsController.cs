@@ -43,12 +43,15 @@ public class Tableau4LightsController : MonoBehaviour
 
         if (audioReactive) {
 
-            if ((Mathf.Abs(analyzer.XDerivated) + Mathf.Abs(analyzer.YDerivated) + Mathf.Abs(analyzer.ZDerivated)) > threshold
+            //Debug.Log("GetPeakLevel = " + Lasp.MasterInput.GetPeakLevel(Lasp.FilterType.Bypass));
+            if (//(Mathf.Abs(analyzer.XDerivated) + Mathf.Abs(analyzer.YDerivated) + Mathf.Abs(analyzer.ZDerivated)) > threshold
+                Lasp.MasterInput.GetPeakLevel(Lasp.FilterType.Bypass) > threshold
                 && timer > 1.0f / maxFrequency)
             {
                 CreateLight();
                 timer = 0;
             }
+
 
 		} else {
 			
