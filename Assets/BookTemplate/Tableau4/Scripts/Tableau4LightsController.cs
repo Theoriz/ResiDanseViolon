@@ -39,13 +39,19 @@ public class Tableau4LightsController : MonoBehaviour
 	// Update is called once per frame
 	void Update() {
 
-		if (audioReactive) {
+        timer += Time.deltaTime;
 
-			if ((Mathf.Abs(analyzer.XDerivated) + Mathf.Abs(analyzer.YDerivated) + Mathf.Abs(analyzer.ZDerivated)) > threshold)
-				CreateLight();
+        if (audioReactive) {
+
+            if ((Mathf.Abs(analyzer.XDerivated) + Mathf.Abs(analyzer.YDerivated) + Mathf.Abs(analyzer.ZDerivated)) > threshold
+                && timer > 1.0f / maxFrequency)
+            {
+                CreateLight();
+                timer = 0;
+            }
 
 		} else {
-			timer += Time.deltaTime;
+			
 
 			if (timer > 1.0f / currentFrequency) {
 
