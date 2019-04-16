@@ -6,6 +6,10 @@ public class Tableau4LightsController : MonoBehaviour
 {
 	public KAPPS.KAPPS kapps;
 	public GameObject lightPrefab;
+	public DataAnalyzer analyzer;
+
+	public bool audioReactive;
+	public float threshold;
 
 	public float floor;
 
@@ -34,14 +38,22 @@ public class Tableau4LightsController : MonoBehaviour
 
 	// Update is called once per frame
 	void Update() {
-		timer += Time.deltaTime;
 
-		if (timer > 1.0f / currentFrequency) {
+		if (audioReactive) {
 
-			CreateLight();
-			timer = 0;
-			currentFrequency = Random.Range(minFrequency, maxFrequency);
+			if ((Mathf.Abs(analyzer.XDerivated) + Mathf.Abs(analyzer.YDerivated) + Mathf.Abs(analyzer.ZDerivated)) > threshold)
+				CreateLight();
 
+		} else {
+			timer += Time.deltaTime;
+
+			if (timer > 1.0f / currentFrequency) {
+
+				CreateLight();
+				timer = 0;
+				currentFrequency = Random.Range(minFrequency, maxFrequency);
+
+			}
 		}
 	}
 

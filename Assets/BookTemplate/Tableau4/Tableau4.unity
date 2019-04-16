@@ -333,6 +333,9 @@ MonoBehaviour:
   kapps: {fileID: 7049978667124332036}
   lightPrefab: {fileID: 7132043907962121448, guid: d0de5f1fc9af3d446b99c28ef1837569,
     type: 3}
+  analyzer: {fileID: 1089857052285416164}
+  audioReactive: 0
+  threshold: 0
   floor: -50
   color: {r: 1, g: 0.94892555, b: 0.8820755, a: 0}
   minRadius: 3
