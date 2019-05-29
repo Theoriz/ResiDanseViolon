@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class MrSceneManager : MonoBehaviour
 {
+    //public bool PreLoadNextScene;
     public bool AutoSwitchScene;
-    public float AutoSwitchTimer = 10;
+    public float AutoSwitchTimer;
     public bool Loop;
     private float _sceneStartTime;
 
@@ -19,13 +20,14 @@ public class MrSceneManager : MonoBehaviour
     public string activeScene;
 
     public int currSceneIndex;
+    public static bool loadingScene { get; set; }
+    public static bool launchingIntro { get; set; }
+    public static bool launchingOutro { get; set; }
+    public static bool playingScene { get; set; }
 
-    public bool inUpdate { get; set; }
-    public bool loadingScene { get; set; }
-    public bool launchingIntro { get; set; }
-    public bool launchingOutro { get; set; }
-    public bool playingScene { get; set; }
-
+    public bool debug;
+    private bool _nextScenePreloaded = false, _isPreloadingNextScene;
+    private AsyncOperation asyncLoad;
     private MrScene currMrScene;
     private Dictionary<string, int> scenesInBuild;
 
@@ -48,8 +50,12 @@ public class MrSceneManager : MonoBehaviour
             scenesName.Add(sceneName);
             scenesInBuild.Add(sceneName, i);
         }
+    }
 
+    private void OnEnable()
+    {
         UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
+        UnityEngine.SceneManagement.SceneManager.activeSceneChanged += OnNewActiveScene;
     }
 
     // Use this for initialization
@@ -69,26 +75,31 @@ public class MrSceneManager : MonoBehaviour
         currSceneIndex = 1;
 
         var lastIndex = PlayerPrefs.GetInt("lastScene", -1);
+        if (lastIndex == 0) lastIndex = -1;
         if (lastIndex == -1)
         {
             PlayerPrefs.SetInt("lastScene", currSceneIndex);
         }
         else
         {
-            Debug.Log("Count build : " + scenesInBuild.Count + " | strange count : " + lastIndex);
+            if(debug)
+                Debug.Log("Count build : " + scenesInBuild.Count + " | Last scene opened : " + lastIndex);
             if(lastIndex <= scenesInBuild.Count)
                 currSceneIndex = lastIndex;
         }
+        StartCoroutine(loadScene(lastIndex));
+        //SceneManager.LoadScene(currSceneIndex);
 
-        SceneManager.LoadScene(currSceneIndex);
-        activeScene = SceneManager.GetActiveScene().name;//SceneManager.GetSceneByBuildIndex(currSceneIndex).name;
+        //if (PreLoadNextScene)
+        //{
+        //    StartCoroutine(LoadYourAsyncScene(currSceneIndex + 1));
+        //}
     }
 
     void Update()
     {
-        inUpdate = true;
-
-        if(AutoSwitchScene)
+        //LoadingScene = loadingScene;
+        if (AutoSwitchScene)
         {
             if(Time.time - _sceneStartTime > AutoSwitchTimer )
             {
@@ -102,9 +113,7 @@ public class MrSceneManager : MonoBehaviour
 
         if (activeScene != SceneManager.GetActiveScene().name && !loadingScene)
         {
-            LoadSceneWithName(activeScene);
-            //edge.SetCurrentScene();
-            //SceneStreamer.SetCurrent(activeScene);
+           LoadSceneWithName(activeScene);
         }
     }
 
@@ -130,7 +139,8 @@ public class MrSceneManager : MonoBehaviour
     {
         if (!loadingScene)
         {
-            Debug.Log("Build index : " + scenesInBuild[name] + " | Current index : " + currSceneIndex);
+            if(debug)
+                Debug.Log("Build index : " + scenesInBuild[name] + " | Current index : " + currSceneIndex);
             loadingScene = true;
             StartCoroutine(loadScene(scenesInBuild[name]));
         }
@@ -138,9 +148,9 @@ public class MrSceneManager : MonoBehaviour
 
     public IEnumerator loadScene(int nextSceneIndex)
     {
+
         if (nextSceneIndex < 1)
         {
-            //nextSceneIndex = 1;
             yield break;
         }
         if (nextSceneIndex > sceneCount)
@@ -149,105 +159,164 @@ public class MrSceneManager : MonoBehaviour
                 nextSceneIndex = 1;
             else
             {
-                //nextSceneIndex = sceneCount;
                 yield break;
             }
         }
-
+        loadingScene = true;
         // a new scene is loading
         _sceneStartTime = Time.time;
-        loadingScene = true;
+
         if (currMrScene != null)
         {
-            // launch scene outro
-            currMrScene.End();
-            playingScene = false;
-            launchingOutro = true;
-
-            // wait appropriate amount of time
+;            // launch scene outro
+            StartCoroutine(currMrScene.LaunchOutro());
             yield return new WaitForSeconds(currMrScene.outroDuration);
-
-            // scene outro is done
-            launchingOutro = false;
         }
+        //if (PreLoadNextScene)
+        //{
+        //    while (!_nextScenePreloaded)
+        //    {
+        //        if (!_isPreloadingNextScene)
+        //            StartCoroutine(LoadYourAsyncScene(nextSceneIndex));
+        //        yield return new WaitForFixedUpdate();
+        //    }
 
-        currSceneIndex = nextSceneIndex;
+        //    Debug.Log("4");
+        //    while (!asyncLoad.isDone)
+        //    {
+        //        Debug.Log("Preloading next scene ...");
+        //        yield return new WaitForFixedUpdate();
+        //    }
+        //    SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(nextSceneIndex));
+        //    _nextScenePreloaded = false;
+        //    _isPreloadingNextScene = false;
+        //    StartCoroutine(LoadYourAsyncScene(currSceneIndex + 1));
+        //}
+        //else
+        //{
 
-        
-        yield return new WaitForFixedUpdate(); //To allow SharedTextureControllable to disable spout;
-        Debug.Log("Loading scene index " + currSceneIndex);
-        UnityEngine.SceneManagement.SceneManager.LoadScene(currSceneIndex);
-        activeScene = SceneManager.GetActiveScene().name;
+        //if (currMrScene != null)
+        //{
+        //    // wait appropriate amount of time
+        //        yield return new WaitForSeconds(currMrScene.outroDuration);
+        //}
+        if (debug)
+            Debug.Log("Loading scene index " + nextSceneIndex);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneIndex);
+    }
+
+    void OnNewActiveScene(Scene current, Scene next)
+    {
+        currSceneIndex = next.buildIndex;
+
+        if (current.name == "Core" || next.name == "Core")
+            return;
         PlayerPrefs.SetInt("lastScene", currSceneIndex);
-        loadingScene = false;
+        //    SceneManager.UnloadSceneAsync(current.buildIndex);
 
-        //if (inUpdate)
-//StartCoroutine(LoadYourAsyncScene());
+        // next.GetRootGameObjects()[0].SetActive(true);
+        bool foundMrScene = false;
+        var rootObjects = next.GetRootGameObjects();
+        foreach (GameObject go in rootObjects)
+        {
+            if (go.GetComponent<MrScene>() != null)
+            {
+                currMrScene = go.GetComponent<MrScene>();
+                foundMrScene = true;
+                break;
+            }
+            else if(go.GetComponentInChildren<MrScene>() != null)
+            {
+                currMrScene = go.GetComponentInChildren<MrScene>();
+                foundMrScene = true;
+                break;
+            }
+        }
+        if (!foundMrScene)
+        {
+            Debug.LogWarning("Couldn't find MrScene component in scene.");
+        }
+        else
+        {
+            // launch intro of loaded scene
+            StartCoroutine(currMrScene.LaunchIntro());
+        }
+        ControllableMaster.LoadEveryPresets();
+
+        //Debug.Log("New active scene : current : " + current.name + " next : " + next.name);
+        activeScene = next.name;
     }
 
     void OnDisable()
     {
         UnityEngine.SceneManagement.SceneManager.sceneLoaded -= OnSceneLoaded;
+        UnityEngine.SceneManagement.SceneManager.activeSceneChanged -= OnNewActiveScene;
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        activeScene = SceneManager.GetActiveScene().name;
-        // do not process Main scene
+        if (debug)
+            Debug.Log("Scene : " + scene.name + " loaded, initializing ...");
+        loadingScene = false;
+        // do not process Core scene
         if (scene.name == "Core") return;
 
-        // fetch parent object of scene
-        //GameObject go = scene.GetRootGameObjects()[0];
+        
+        //if (PreLoadNextScene && scene.buildIndex == currSceneIndex + 1) //preloaded scene
+        //{
+        //    scene.GetRootGameObjects()[0].SetActive(false);
+        //    _nextScenePreloaded = true;
+        //    return;
+        //}
 
-        bool foundMrScene = false;
-        foreach (GameObject go in scene.GetRootGameObjects())
-        {
-            if (go.GetComponent<MrScene>() != null)
-            {
-                // get components in object and set variables
-                currMrScene = go.GetComponent<MrScene>();
-                currMrScene.rootGameObject = go;
-                currMrScene.sceneIndex = currSceneIndex;
+        SceneManager.SetActiveScene(scene);
+        
 
-                foundMrScene = true;
-            }
-        }
-
-        if (!foundMrScene)
-        {
-            Debug.LogWarning("Couldn't find MrScene component in scene.");
-            return;
-        }
-
-        Debug.Log("Level " + scene.name + " loaded with id " + currMrScene.id + " and build index " + currSceneIndex);
-
-        ControllableMaster.LoadEveryPresets();
+        if (debug)
+            Debug.Log("Level " + scene.name + " ["+ scene.buildIndex + "]" + " is initialized, active scene is " + currSceneIndex);
 
         // scene has succesfully loaded
         loadingScene = false;
-
-        // launch intro of loaded scene
-        StartCoroutine(currMrScene.Launch());
-        playingScene = false;
-        launchingIntro = true;
-
-        //launch preloading of next scene
-       // if(inUpdate)
-         //   StartCoroutine(LoadAsyncScene());
+        // launch preloading of next scene
+        //if (PreLoadNextScene && !_nextScenePreloaded)
+        //{
+        //    _isPreloadingNextScene = true;
+        //    StartCoroutine(LoadYourAsyncScene(currSceneIndex + 1));
+        //}
     }
 
-    //IEnumerator LoadYourAsyncScene()
-    //{
-    //    // The Application loads the Scene in the background at the same time as the current Scene.
-    //    //This is particularly good for creating loading screens. You could also load the Scene by build //number.
-    //    AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Cube2");//, LoadSceneMode.Additive);
-    //    asyncLoad.allowSceneActivation = false;
-    //    //Wait until the last operation fully loads to return anything
-    //    while (!asyncLoad.isDone)
-    //    {
-    //        yield return null;
-    //    }
-    //    //asyncLoad.allowSceneActivation = true;
-    //}
+    //Asynchronous scene loading is not really possible now, a asynchronous loading of scene implies an activation of gameobjects in it, even for a frame, if we could prevent this we could use it
+    IEnumerator LoadYourAsyncScene(int nextSceneIndex)
+    {
+        _isPreloadingNextScene = true;
+        // The Application loads the Scene in the background at the same time as the current Scene.
+        //This is particularly good for creating loading screens. You could also load the Scene by build //number.
+
+        if (nextSceneIndex < 1)
+        {
+            yield break;
+        }
+        if (nextSceneIndex > sceneCount)
+        {
+            if (Loop)
+                nextSceneIndex = 1;
+            else
+            {
+                yield break;
+            }
+        }
+        asyncLoad = SceneManager.LoadSceneAsync(nextSceneIndex, LoadSceneMode.Additive);//, LoadSceneMode.Additive);
+
+        //Wait until the last operation fully loads to return anything
+        while (asyncLoad.progress <= 0.89f)
+        {
+            yield return 0;
+        }
+        SceneManager.GetSceneByBuildIndex(nextSceneIndex).GetRootGameObjects()[0].SetActive(false);
+
+        _isPreloadingNextScene = false;
+        _nextScenePreloaded = true;
+        yield return 0;
+    }
 
 }

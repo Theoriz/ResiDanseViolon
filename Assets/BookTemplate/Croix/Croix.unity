@@ -158,6 +158,102 @@ MonoBehaviour:
   analyzer: {fileID: 1089857052285416164}
   kapps: {fileID: 7049978667124332036}
   scale: 0.5
+--- !u!1 &260025493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 260025495}
+  - component: {fileID: 260025494}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &260025494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260025493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baf5953dffc33cb4a8d03c2d057a3e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+  introDuration: 2
+  outroDuration: 2
+  augmentaBookBasicManager: {fileID: 0}
+  FadeInCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  FadeOutCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0.022092793
+      outSlope: 0.022092793
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.08652238
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -2.9192991
+      outSlope: -2.9192991
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.03471732
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  FadingColor: {r: 0, g: 0, b: 0, a: 0}
+--- !u!4 &260025495
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260025493}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &287613241594627376
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,7 +1070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   linkedAugmentaAreaId: Sol
-  PrefabToInstantiate: {fileID: 2343258516642384393, guid: de29bf9c7edc52243b0679c194a934f4,
+  PrefabToInstantiate: {fileID: 1782730393742059513, guid: f013404a16162034c89a9bc30bbcb98f,
     type: 3}
   PositionFollowTightness: 0.8
   VelocityAverageValueCount: 1
@@ -1395,7 +1491,7 @@ MonoBehaviour:
   _pointCloudsList:
   - {fileID: 11400000, guid: 382dad69a643bbf47a74d250491464d4, type: 2}
   _particleMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  _particleScale: {x: 0.1, y: 1.5, z: 0.1}
+  _particleScale: {x: 0.1, y: 0.8, z: 0.1}
   _particleMaterial: {fileID: 2100000, guid: 15c227e9357f3754987244e8d3ddc199, type: 2}
   _bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -1496,6 +1592,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7049978667124332035}
   - component: {fileID: 7049978667124332036}
+  - component: {fileID: 7049978667124332038}
+  - component: {fileID: 7049978667124332039}
   m_Layer: 0
   m_Name: KAPPS-Floor
   m_TagString: Untagged
@@ -1503,6 +1601,57 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7049978667124332038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7049978667124332037}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08157e305f43d44a998d709021dd3b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minMaxNoiseScale: {x: 0, y: 0}
+  filterType: 0
+  scale: 1
+  lerpStrength: 1
+  exponent: 1
+  kapps: {fileID: 7049978667124332036}
+--- !u!114 &7049978667124332039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7049978667124332037}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eb406d4909d1d44fa489d30cba6c3fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _filterType: 0
+  _peakTracking: 1
+  _gain: 6
+  _dynamicRange: 12
+  _holdAndFallDown: 1
+  _fallDownSpeed: 0.3
+  _normalizedLevelEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7049978667124332037}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Lasp.AudioLevelEvent, Lasp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &7113367163159074908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1618,7 +1767,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7113367163159074910}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.32, y: 0, z: -3.16}
+  m_LocalPosition: {x: -0.12, y: 0, z: -2.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5003705110881123018}

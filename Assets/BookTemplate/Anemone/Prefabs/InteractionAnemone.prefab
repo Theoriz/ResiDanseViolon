@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6191794370033839441
+--- !u!1 &1812871840049516453
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,49 +8,98 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4397042130568829551}
-  - component: {fileID: 6219215246301836077}
-  - component: {fileID: 7895405217328435315}
+  - component: {fileID: 5557550265739116825}
+  - component: {fileID: 6907930435282141848}
+  - component: {fileID: 6836585544839358040}
+  - component: {fileID: 8835488951094523732}
   m_Layer: 0
-  m_Name: Tableau4AugmentaPrefab
+  m_Name: InteractionAnemone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4397042130568829551
+--- !u!4 &5557550265739116825
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6191794370033839441}
+  m_GameObject: {fileID: 1812871840049516453}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.41, y: 0, z: -0.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6219215246301836077
+--- !u!114 &6907930435282141848
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6191794370033839441}
+  m_GameObject: {fileID: 1812871840049516453}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ba005b6d48e15f45bac54ba31b0174f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updater: 0
+  updater: 6
   particleSystemList: []
   active: 1
   infiniteInX: 0
   infiniteInY: 1
   infiniteInZ: 0
-  radius: 3.21
+  radius: 1
+  intensity: 50
+  useTransformRotation: 0
+  gravityDirection: {x: 0, y: -1, z: 0}
+  color: {r: 0, g: 1, b: 0.9731083, a: 1}
+  lightEmissionProbability: 1
+  lightEmissionOffset: 0
+  lightEmissionFrequency: 0
+  lightEmissionPhase: 0
+  dipoleAxis: {x: 0, y: 1, z: 0}
+  isMagnetic: 0
+  vortexAxis: {x: 0, y: -1, z: 0}
+  vortexRadialIntensity: 1
+  vortexDownstreamIntensity: 1
+  orbRadius: 1
+  orbSigma: 1
+  revolutionAxis: {x: 0, y: 1, z: 0}
+  revolutionPowerOfR: 1
+  noiseDeformerDisplacementIntensity: 0
+  noiseDeformerRotationIntensity: 0
+  noiseDeformerScaleIntensity: 0
+  noiseDeformerPulseIntensity: 0
+  axisConstraint: {x: 0, y: 0, z: 0}
+  velocityAlignmentStrength: 0
+  axisAlignmentStrength: 0
+  showGizmos: 1
+  activeUpdaterAndInfinite: {x: 0, y: 1, z: 0, w: 7}
+  data1: {x: 0, y: 1, z: 0.9731083, w: 1}
+  data2: {x: 1, y: 0, z: 0, w: 0}
+  data3: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6836585544839358040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812871840049516453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ba005b6d48e15f45bac54ba31b0174f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updater: 10
+  particleSystemList: []
+  active: 1
+  infiniteInX: 0
+  infiniteInY: 1
+  infiniteInZ: 0
+  radius: 1
   intensity: 1
   useTransformRotation: 0
   gravityDirection: {x: 0, y: -1, z: 0}
@@ -68,35 +117,35 @@ MonoBehaviour:
   orbSigma: 1
   revolutionAxis: {x: 0, y: 1, z: 0}
   revolutionPowerOfR: 1
-  noiseDeformerDisplacementIntensity: 0.12
-  noiseDeformerRotationIntensity: 100
+  noiseDeformerDisplacementIntensity: 0
+  noiseDeformerRotationIntensity: 0
   noiseDeformerScaleIntensity: 0
-  noiseDeformerPulseIntensity: 1
-  axisConstraint: {x: 0, y: 0, z: 0}
+  noiseDeformerPulseIntensity: 0
+  axisConstraint: {x: 1, y: 1, z: 1}
   velocityAlignmentStrength: 0
   axisAlignmentStrength: 0
   showGizmos: 1
-  activeUpdaterAndInfinite: {x: 0, y: 1, z: 0, w: 1}
-  data1: {x: 0.5, y: 100, z: 0, w: 5}
+  activeUpdaterAndInfinite: {x: 0, y: 1, z: 0, w: 11}
+  data1: {x: 1, y: 1, z: 1, w: 0}
   data2: {x: 0, y: 0, z: 0, w: 0}
   data3: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &7895405217328435315
+--- !u!114 &8835488951094523732
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6191794370033839441}
+  m_GameObject: {fileID: 1812871840049516453}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64bde539ddc29ce4f8c55b7ff59a7283, type: 3}
+  m_Script: {fileID: 11500000, guid: 98542937ccbe2514bb9ee44a74471f15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   augmentaAreaAnchor: {fileID: 0}
   pid: 0
   LoopAliveAnimation: 0
   AnimatedValue: 0
-  AppearAnimDuration: 1
+  AppearAnimDuration: 1.5
   AppearAnimCurve:
     serializedVersion: 2
     m_Curve:
@@ -112,8 +161,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: 2
+      outSlope: 2
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -146,7 +195,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  DisappearAnimDuration: 1
+  DisappearAnimDuration: 1.5
   StartWithActualValue: 1
   DisappearAnimCurve:
     serializedVersion: 2
@@ -163,11 +212,11 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: -2.578239
-      outSlope: 2
-      tangentMode: 1
+      inSlope: -2.140849
+      outSlope: -2.140849
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0.036267042
+      inWeight: 0.07115716
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2

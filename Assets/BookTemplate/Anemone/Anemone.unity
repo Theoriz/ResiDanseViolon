@@ -158,6 +158,102 @@ MonoBehaviour:
   analyzer: {fileID: 1089857052285416164}
   kapps: {fileID: 7049978667124332036}
   scale: 0.5
+--- !u!1 &1804468392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1804468394}
+  - component: {fileID: 1804468393}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1804468393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804468392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baf5953dffc33cb4a8d03c2d057a3e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+  introDuration: 2
+  outroDuration: 2
+  augmentaBookBasicManager: {fileID: 0}
+  FadeInCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  FadeOutCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0.022092793
+      outSlope: 0.022092793
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.08652238
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -2.9192991
+      outSlope: -2.9192991
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.03471732
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  FadingColor: {r: 0, g: 0, b: 0, a: 0}
+--- !u!4 &1804468394
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804468392}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &287613241594627376
 GameObject:
   m_ObjectHideFlags: 0
@@ -460,7 +556,7 @@ MonoBehaviour:
   infiniteInX: 0
   infiniteInY: 0
   infiniteInZ: 0
-  radius: 2.36
+  radius: 2
   intensity: 203.2
   useTransformRotation: 0
   gravityDirection: {x: 0, y: -1, z: 0}
@@ -974,7 +1070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   linkedAugmentaAreaId: Sol
-  PrefabToInstantiate: {fileID: 2343258516642384393, guid: de29bf9c7edc52243b0679c194a934f4,
+  PrefabToInstantiate: {fileID: 1812871840049516453, guid: 8a5bce8971b375d43b5d3c79253865bb,
     type: 3}
   PositionFollowTightness: 0.8
   VelocityAverageValueCount: 1
@@ -1619,7 +1715,7 @@ MonoBehaviour:
   _gridResolution: {x: 1, y: 1, z: 10}
   _gridStrength: 1
   _enableAxisConstraintUpdater: 1
-  _axisConstraintUseSources: 0
+  _axisConstraintUseSources: 1
   _axisConstraintFreezeX: 0
   _axisConstraintFreezeY: 0
   _axisConstraintFreezeZ: 0
@@ -1773,7 +1869,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7113367163159074910}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.32, y: 0, z: -3.16}
+  m_LocalPosition: {x: 0.14, y: 0, z: -3.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5003705110881123018}

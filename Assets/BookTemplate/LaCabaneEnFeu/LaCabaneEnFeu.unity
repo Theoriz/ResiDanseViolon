@@ -112,6 +112,102 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1213704016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1213704018}
+  - component: {fileID: 1213704017}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1213704017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213704016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baf5953dffc33cb4a8d03c2d057a3e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+  introDuration: 2
+  outroDuration: 2
+  augmentaBookBasicManager: {fileID: 0}
+  FadeInCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  FadeOutCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0.022092793
+      outSlope: 0.022092793
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.08652238
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -2.9192991
+      outSlope: -2.9192991
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.03471732
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  FadingColor: {r: 0, g: 0, b: 0, a: 0}
+--- !u!4 &1213704018
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213704016}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1518709608
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,6 +434,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1159641845825328226}
   - component: {fileID: 1159641845825328229}
+  - component: {fileID: 1159641845825328230}
   m_Layer: 0
   m_Name: KAPPS-Sphere
   m_TagString: Untagged
@@ -379,13 +476,13 @@ MonoBehaviour:
   _initMinBounciness: 1
   _initMaxBounciness: 1
   _initCollisionDistance: 0
-  _enableNoiseDeformerUpdater: 0
+  _enableNoiseDeformerUpdater: 1
   _noiseDeformerUseSources: 0
-  _noiseDeformerDisplacementByNoise: 0.125
+  _noiseDeformerDisplacementByNoise: 0.034656525
   _noiseDeformerRotationByNoise: 0.125
   _noiseDeformerScaleByNoise: 0.1
   _noiseDeformerScaleByPulse: 0.1
-  _noiseDeformerNoiseFrequency: 1
+  _noiseDeformerNoiseFrequency: 0.2
   _noiseDeformerNoiseSpeed: {x: 0, y: 0.25, z: 0}
   _noiseDeformerPulseProbability: 0
   _noiseDeformerPulseSpeed: 2
@@ -411,7 +508,7 @@ MonoBehaviour:
   _particleEmissionLifetime: 5
   _particleEmissionBirthDuration: 0.5
   _particleEmissionDeathDuration: 0.5
-  _enableOriginAttractionUpdater: 0
+  _enableOriginAttractionUpdater: 1
   _originAttractionStrength: 94.5
   _enableOriginInterpolationUpdater: 1
   _originInterpolationEnabled: 0
@@ -472,6 +569,24 @@ MonoBehaviour:
   _particleUpdateAlignmentAxis: {x: 1, y: 0, z: 0}
   _particleUpdateAlignmentAxisStrength: 1
   _compute: {fileID: 7200000, guid: 35ba6035930f60f4eb3b15dc159995e4, type: 3}
+--- !u!114 &1159641845825328230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159641845825328228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754537b5c5b396b4ba19f92c449edc51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minMaxNoiseScale: {x: 0, y: 2}
+  filterType: 0
+  scale: 1
+  lerpStrength: 1
+  exponent: 1
+  kapps: {fileID: 1159641845825328229}
 --- !u!1 &1240520811844636102
 GameObject:
   m_ObjectHideFlags: 0
@@ -2224,4 +2339,4 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0

@@ -7,82 +7,54 @@ public class MrScene : MonoBehaviour
     [Header("MrScene Settings")]
     public string id;
     public float introDuration;
-    public AnimationCurve introAnimationCurve;
-
     public float outroDuration;
-    public AnimationCurve outroAnimationCurve;
+
     private Coroutine outroCoroutine;
 
-    public int sceneIndex { get; set; }
-    public GameObject rootGameObject { get; set; }
-    public MrSceneManager sceneManager { get; set; }
-
-    public List<Component> camComponents = new List<Component>();
-    
-    // Use this for initisalization
-    void Awake()
+    public IEnumerator LaunchIntro()
     {
-        // get scene manager in hierarchy
-        GameObject go = GameObject.Find("Core");
+        MrSceneManager.launchingIntro = true;
 
-        if (go != null)
-        {
-            sceneManager = go.GetComponent<MrSceneManager>();
-        }
-        else
-        {
-            Debug.LogWarning("Couldn't find a scene manager.");
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public IEnumerator Launch()
-    {
-        sceneManager.launchingIntro = true; 
-
-        // launch intro of scene
-        LaunchIntro();
+        StartCoroutine(Intro());
 
         yield return new WaitForSeconds(introDuration);
 
-        // intro is finished
-        if (sceneManager != null)
-        {
-            sceneManager.launchingIntro = false;
-            sceneManager.playingScene = true;
-        }        
+        MrSceneManager.launchingIntro = false;
+        MrSceneManager.playingScene = true;   
     }
 
-    public virtual void LaunchIntro()
+    public IEnumerator LaunchOutro()
     {
-        if (sceneManager != null)
+        MrSceneManager.launchingOutro = true;
+        MrSceneManager.playingScene = false;
+
+        StartCoroutine(Outro());
+
+        yield return new WaitForSeconds(outroDuration);
+
+        MrSceneManager.launchingOutro = false;
+    }
+
+    public virtual IEnumerator Intro()
+    {
+        yield return 0;
+    }
+
+    public virtual IEnumerator Outro()
+    {
+        yield return 0;
+    }
+    /*
+    protected void SetSceneVolume(float value)
+    {
+        if (SoundManager.instance)
         {
-            this.transform.position = new Vector3(0, 0, 0);
-            this.transform.rotation = Quaternion.Euler(0, 0, 0);
+            SoundManager.instance.masterVolume = value;
+        }
+        else
+        {
+            AudioListener.volume = value;
         }
     }
-
-    public void End()
-    {
-        // launch outro of scene
-        LaunchOutro();
-    }
-
-    public virtual void LaunchOutro()
-    {
-        // automatically look for DoTweenAnimations in the children of the scene
-        // this method can be overriden by all children to code a custom outro
-        //foreach (DOTweenAnimation anim in rootGameObject.GetComponentsInChildren<DOTweenAnimation>())
-        //{
-        //    if (anim.id == "outro")
-        //    {
-        //        anim.DOPlayAllById("outro");
-        //    }
-        //}
-    }
+    */
 }
